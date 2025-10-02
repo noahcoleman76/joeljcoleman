@@ -8,13 +8,15 @@ import CaseStudies from "./components/CaseStudies";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import MeetJoel from "./components/MeetJoel";
+import LogosBar from "./components/LogosBar";
 
 export default function App() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <ValueProp />   {/* moved “Moves the Needle” section here */}
+      <ValueProp />
+      <LogosBar />
       <MeetJoel />
       <Services />
       <About />

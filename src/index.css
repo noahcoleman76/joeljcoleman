@@ -9,7 +9,9 @@
 }
 
 /* Site-wide dark background + white text */
-body { @apply bg-background text-white font-primary; }
+body {
+  @apply bg-background text-white font-primary;
+}
 
 /* Helpers */
 .container-narrow {
@@ -18,35 +20,58 @@ body { @apply bg-background text-white font-primary; }
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .container-narrow .joeljcoleman-home {
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 2px;
 }
-.container-narrow a{
+
+.container-narrow a {
   font-size: large;
   font-weight: bold;
 }
-.section { @apply py-16 md:py-24; }
-.section-title { @apply text-3xl md:text-4xl font-semibold; }
-.section-subtitle { @apply mt-3 text-white/80; }
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+.section-subtitle {
+  @apply mt-3 text-white/80;
+}
 
 /* Components tuned for dark bg */
-.card { @apply bg-white/10 rounded-xl border border-white/20 p-6; }
-.btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-medium transition; }
-.btn-primary { @apply text-background hover:opacity-90; 
+.card {
+  @apply bg-white/10 rounded-xl border border-white/20 p-6;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-medium transition;
+}
+
+.btn-primary {
+  @apply text-background hover:opacity-90;
   background-color: white;
   color: rgb(88, 30, 143);
 }
-.btn-outline { @apply border border-white/50 text-white hover:border-brand hover:text-brand; }
 
-.hey{
+.btn-outline {
+  @apply border border-white/50 text-white hover:border-brand hover:text-brand;
+}
+
+.hey {
   font-size: 3em;
 }
-.leftmeet{
+
+.leftmeet {
   padding-left: 50px;
 }
-.meetright p{
+
+.meetright p {
   font-size: 1.5em;
   margin-top: auto;
   margin-bottom: auto;
