@@ -29,19 +29,21 @@ const items = [
 
 export default function Services() {
   return (
-    <section id="services" className="section bg-white">
-      <div className="container-narrow">
-        <h2 className="section-title">Services</h2>
-        <p className="section-subtitle">Clear scopes, transparent timelines, and practical deliverables your team can own.</p>
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
-          {items.map((s) => (
-            <div key={s.title} className="card p-6">
-              <h3 className="text-xl font-semibold">{s.title}</h3>
-              <p className="mt-2 text-gray-600">{s.body}</p>
-            </div>
-          ))}
+    <section id="services" className="section">
+  <div className="container-narrow">
+    <h2 className="section-title">Services</h2>
+    <p className="section-subtitle">Clear scopes, transparent timelines, and practical deliverables your team can own.</p>
+    <div className="mt-10 grid md:grid-cols-2 gap-6">
+      {items.map((s) => (
+        <div key={s.title} className="card">
+          <div className="p-6">
+            <h3 className="text-xl font-semibold">{s.title}</h3>
+            <p className="mt-2 text-white/80">{s.body}</p>
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
   )
 }

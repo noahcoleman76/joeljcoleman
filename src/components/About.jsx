@@ -9,7 +9,7 @@ export default function About() {
           <p className="section-subtitle">
             Former superintendent and state leader with a track record of raising achievement and building trust.
           </p>
-          <div className="mt-6 space-y-4 text-gray-700">
+          <div className="mt-6 space-y-4 text-white/80">
             <p>
               Joel J. Coleman has led diverse districts through reform and innovation—
               from strategic budgeting and special education improvements to new program design and community engagement.
@@ -21,7 +21,7 @@ export default function About() {
         </div>
         <aside className="card p-6">
           <h3 className="font-semibold">Expertise</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700 list-disc list-inside">
+          <ul className="mt-3 space-y-2 text-sm text-white/80 list-disc list-inside">
             <li>Superintendent & cabinet leadership</li>
             <li>Board relations & governance</li>
             <li>Special education leadership (IDEA)</li>

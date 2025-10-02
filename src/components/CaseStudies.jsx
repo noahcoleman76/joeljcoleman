@@ -20,20 +20,22 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section id="case-studies" className="section bg-white">
+    // change: <section id="case-studies" className="section bg-white">
+    <section id="case-studies" className="section">
       <div className="container-narrow">
         <h2 className="section-title">Case Studies</h2>
         <p className="section-subtitle">A glimpse into measurable outcomes from past engagements.</p>
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {cases.map(c => (
             <div key={c.title} className="card p-6">
-              <div className="text-sm text-brand-700 font-medium">{c.result}</div>
+              <div className="text-sm text-brand font-medium">{c.result}</div>
               <h3 className="mt-2 text-xl font-semibold">{c.title}</h3>
-              <p className="mt-2 text-gray-600">{c.summary}</p>
+              <p className="mt-2 text-white/80">{c.summary}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
+
   )
 }
