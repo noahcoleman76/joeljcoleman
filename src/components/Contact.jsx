@@ -3,24 +3,30 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section">
-      <div className="container-narrow grid md:grid-cols-2 gap-8">
-        {/* Left: Form */}
-        <div>
-          <h1 className="section-title">Get in touch</h1>
-          <p className="section-subtitle">
-            Tell us about your district&apos;s goals, challenges, and timeline.
-          </p>
+    <section id="contact" className="section bg-[#7024ca]">
+      {/* Vertically center the whole block */}
+      <div className="container-narrow min-h-[70vh] md:min-h-[80vh] flex items-center">
+        <div className="w-full max-w-3xl mx-auto">
+          {/* Blurb: white background, black text */}
+          <div className="mb-6 rounded-xl border border-slate-200 bg-white p-4 text-center text-slate-900">
+            <p>
+              Joel typically responds within <span className="font-semibold">three business days</span> to
+              schedule a <span className="font-semibold">complimentary consultation</span>.
+            </p>
+          </div>
 
-          <div className="card p-6 mt-6">
+          {/* Form (white card) */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft text-slate-900">
+            <h1 className="text-2xl font-semibold">Get in touch</h1>
+
             <form
               name="contact"
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              className="space-y-4"
+              className="mt-6 space-y-6"
             >
-              {/* Netlify form helpers */}
+              {/* Netlify helpers */}
               <input type="hidden" name="form-name" value="contact" />
               <p className="hidden">
                 <label>
@@ -28,112 +34,97 @@ export default function Contact() {
                 </label>
               </p>
 
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  className="mt-1 input"
-                  placeholder="Your name"
-                  required
-                />
+              {/* Row: Name / Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700">
+                    Name <span className="text-[#7024ca]">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                    className="mt-1 block w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-400 focus:border-[#7024ca]/70 focus:outline-none focus:ring-2 focus:ring-[#7024ca]/60"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700">
+                    Email <span className="text-[#7024ca]">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="you@district.org"
+                    className="mt-1 block w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-400 focus:border-[#7024ca]/70 focus:outline-none focus:ring-2 focus:ring-[#7024ca]/60"
+                  />
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="mt-1 input"
-                  placeholder="you@district.org"
-                  required
-                />
+              {/* Row: Organization / Role */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="org" className="block text-sm font-medium text-slate-700">
+                    Organization
+                  </label>
+                  <input
+                    id="org"
+                    name="org"
+                    placeholder="District / School / Org"
+                    className="mt-1 block w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-400 focus:border-[#7024ca]/70 focus:outline-none focus:ring-2 focus:ring-[#7024ca]/60"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="role" className="block text-sm font-medium text-slate-700">
+                    Role (optional)
+                  </label>
+                  <input
+                    id="role"
+                    name="role"
+                    placeholder="Superintendent, Board Chair, Principal…"
+                    className="mt-1 block w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-400 focus:border-[#7024ca]/70 focus:outline-none focus:ring-2 focus:ring-[#7024ca]/60"
+                  />
+                </div>
               </div>
 
+              {/* Message */}
               <div>
-                <label htmlFor="org" className="block text-sm font-medium">
-                  Organization
-                </label>
-                <input
-                  id="org"
-                  name="org"
-                  className="mt-1 input"
-                  placeholder="District / School / Org"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="role" className="block text-sm font-medium">
-                  Role (optional)
-                </label>
-                <input
-                  id="role"
-                  name="role"
-                  className="mt-1 input"
-                  placeholder="Superintendent, Board Chair, Principal, etc."
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium">
-                  Message
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700">
+                  Message <span className="text-[#7024ca]">*</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows="6"
-                  className="mt-1 textarea"
-                  placeholder="Share your priorities, timeline, and any context you'd like Joel to review."
                   required
-                ></textarea>
+                  placeholder="Share your priorities, timeline, and any context you'd like Joel to review."
+                  className="mt-1 block w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-400 focus:border-[#7024ca]/70 focus:outline-none focus:ring-2 focus:ring-[#7024ca]/60"
+                />
               </div>
 
-              <button className="btn btn-primary w-full" type="submit">
+              <button
+                type="submit"
+                className="btn w-full bg-[#7024ca] text-white hover:opacity-90
+             focus:outline-none focus:ring-2 focus:ring-[#7024ca]
+             focus:ring-offset-2 focus:ring-offset-white"
+              >
                 Send message
               </button>
 
-              <p className="text-xs text-white/70">
+
+              <p className="text-xs text-slate-600">
                 Prefer email?{" "}
-                <a className="underline text-brand" href="mailto:hello@joeljcoleman.com">
-                  hello@joeljcoleman.com
+                <a className="underline text-[#7024ca] hover:opacity-90" href="mailto:joeljcoleman@gmail.com">
+                  joeljcoleman@gmail.com
                 </a>
               </p>
             </form>
           </div>
         </div>
-
-        {/* Right: Info / Process */}
-        <aside className="card p-6">
-          <h3 className="text-lg font-semibold">Typical engagement flow</h3>
-          <ol className="mt-3 list-decimal list-inside space-y-2 text-sm text-white/80">
-            <li>30–45 min discovery with the superintendent &amp; board chair.</li>
-            <li>Data &amp; document review; site visits &amp; stakeholder interviews.</li>
-            <li>Findings, priorities, and phased implementation plan.</li>
-            <li>Coaching for cabinet &amp; principal teams; progress monitoring.</li>
-          </ol>
-
-          <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-sm">
-            Limited openings per quarter to ensure depth and follow-through.
-          </div>
-
-          <div className="mt-6">
-            <h4 className="font-semibold">Office</h4>
-            <ul className="mt-2 text-white/80 text-sm space-y-1">
-              <li>Joel J. Coleman Consulting</li>
-              <li>Based in Utah • Remote nationwide</li>
-              <li>
-                <a className="text-brand underline" href="mailto:hello@joeljcoleman.com">
-                  hello@joeljcoleman.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </aside>
       </div>
     </section>
   );
