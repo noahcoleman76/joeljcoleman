@@ -2,15 +2,25 @@
 import React from "react";
 
 export default function Hero() {
+  const videoSrc = `${import.meta.env.BASE_URL}media/hero.mp4`;
+
   return (
     <section
       id="hero"
-      className="relative overflow-hidden min-h-[50vh] md:min-h-[65vh] lg:min-h-[75vh] pt-0 pb-16 md:pb-24"
+      className="
+        relative overflow-hidden
+        mt-[var(--nav-h,96px)] md:mt-0
+        min-h-[55vh] md:min-h-[65vh] lg:min-h-[75vh]
+        flex items-center justify-center md:block
+      "
       aria-label="Intro"
     >
-      {/* Right-side background video (full-bleed to the right, matches hero height) */}
+      {/* Background video: full on mobile; right-side on md+ */}
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[60vw]"
+        className="
+          pointer-events-none absolute inset-0
+          md:inset-auto md:top-0 md:bottom-0 md:right-0 md:left-auto md:w-[60vw]
+        "
         aria-hidden="true"
       >
         <video
@@ -19,26 +29,28 @@ export default function Hero() {
           muted
           loop
           playsInline
-          src="/media/hero.mp4"
+          src={videoSrc}
         />
-        {/* Readability overlay (soft scrim) */}
-        <div className="absolute inset-0 bg-black/40" />
-        {/* Gentle blend so transparent header looks correct at top + left */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,theme(colors.background)_0%,transparent_12%),linear-gradient(to_top,theme(colors.background)_0%,transparent_25%)]" />
+        <div className="absolute inset-0 bg-black/45 md:bg-black/40" />
+        <div className="absolute inset-0 hidden md:block bg-[linear-gradient(to_right,theme(colors.background)_0%,transparent_12%),linear-gradient(to_top,theme(colors.background)_0%,transparent_25%)]" />
       </div>
 
-      {/* Blurb: 40px gutters; cap at 70% from left on md+; EXACT vertical center */}
-      <div className="absolute left-10 right-10 md:right-[35vw] top-1/2 -translate-y-1/4 z-10">
-        <h1
-          className="
-            font-primary font-bold tracking-tight leading-[1.02]
-            text-[2.4rem] sm:text-[3rem] md:text-[3.6rem] lg:text-[4.8rem]
-            text-left 
-          "
-        >
+      {/* Copy: centered on mobile; absolutely centered on md+ */}
+      <div
+        className="
+          relative z-10 w-full max-w-3xl mx-auto
+          px-6 sm:px-8 md:px-10
+          text-center md:text-left
+          md:w-auto md:absolute md:left-10 md:right-[35vw] md:top-1/2 md:-translate-y-1/2
+        "
+      >
+        <h1 className="
+          font-primary font-bold tracking-tight leading-[1.02]
+          text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[4.6rem]
+        ">
           Academic <span className="text-brand">Excellence</span>{" "}
           <span className="text-white/90">Through Innovation</span>{" "}
-          <span className="text-white/80"> And Mastery</span>
+          <span className="text-white/80">and Mastery</span>
         </h1>
       </div>
     </section>

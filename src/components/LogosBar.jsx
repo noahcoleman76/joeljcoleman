@@ -6,6 +6,7 @@ export default function LogosBar() {
     const l1 = `${base}media/logo1.png`;
     const l2 = `${base}media/logo2.png`;
     const l3 = `${base}media/logo3.png`;
+    const l4 = `${base}media/logo4.png`;
 
     return (
         <section
@@ -19,11 +20,12 @@ export default function LogosBar() {
                 <div className="flex flex-wrap items-center justify-around gap-x-16 gap-y-6 min-w-0">
                     <img src={l1} alt="Logo 1" loading="lazy" decoding="async"
                         className="h-[2.4rem] md:h-12 lg:h-[3.6rem] w-auto max-w-full object-contain" />
+                    <img src={l4} alt="Logo 4" loading="lazy" decoding="async"
+                        className="h-[2.4rem] md:h-12 lg:h-[3.6rem] w-auto max-w-full object-contain" />
                     <img src={l2} alt="Logo 2" loading="lazy" decoding="async"
                         className="h-[2.4rem] md:h-12 lg:h-[3.6rem] w-auto max-w-full object-contain" />
                     <img src={l3} alt="Logo 3" loading="lazy" decoding="async"
                         className="h-[2.4rem] md:h-12 lg:h-[3.6rem] w-auto max-w-full object-contain" />
-
                 </div>
             </div>
         </section>

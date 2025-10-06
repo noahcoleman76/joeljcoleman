@@ -1,27 +1,31 @@
+// src/components/MeetJoel.jsx
 import React from "react";
-import joel from "../assets/joel.jpg"; // <-- Vite will bundle this
+import joel from "../assets/joel.jpg";
 
 export default function MeetJoel() {
   return (
     <section id="meet-joel" className="section">
-      <div className="container-narrow grid gap-8 md:grid-cols-[30%_1fr] items-start meetjoel">
-        {/* Left 30%: round icon + greeting */}
-        <div className="flex flex-col items-start gap-4 leftmeet">
+      <div className="container-narrow grid gap-8 md:grid-cols-[30%_1fr] items-start">
+        {/* Left: avatar + greeting
+            - mobile: row, centered
+            - md+: column, left-aligned */}
+        <div className="flex items-center justify-center gap-4 mx-auto
+                        md:mx-0 md:flex-col md:items-start">
           <img
             src={joel}
             alt="Joel J. Coleman"
-            className="h-24 w-24 rounded-full object-cover ring-2 ring-white/20"
+            className="h-20 w-20 sm:h-24 sm:w-24 rounded-full object-cover ring-2 ring-white/20"
           />
-          <div className="leading-tight">
-            <div className="text-white/80 hey">Hey!</div>
-            <div className="hey">
+          <div className="leading-tight text-center md:text-left">
+            <div className="text-white/80 text-lg sm:text-xl">Hey!</div>
+            <div className="text-2xl sm:text-3xl font-semibold">
               I&apos;m <span className="font-bold">Joel.</span>
             </div>
           </div>
         </div>
 
-        {/* Right 70%: two paragraphs */}
-        <div className="space-y-4 text-white/80 meetright">
+        {/* Right: two paragraphs */}
+        <div className="space-y-4 text-white/80">
           <p>
             I’m an educator, superintendent, and advocate for{" "}
             <span className="text-brand">reimagining</span> what learning can be.
