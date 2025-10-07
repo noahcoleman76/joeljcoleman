@@ -14,17 +14,24 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" aria-labelledby="services-heading" className="section bg-[#7024ca] text-white">
+    <section
+      id="services"
+      aria-labelledby="services-heading"
+      className="section bg-section text-ink"
+    >
       <div className="container-narrow grid gap-10 md:grid-cols-2">
         {/* Left: sticky heading */}
         <aside className="self-start md:sticky md:top-28 pt-[50px]">
-          <h2 id="services-heading" className="text-5xl md:text-6xl font-extrabold leading-tight">
+          <h2
+            id="services-heading"
+            className="text-5xl md:text-6xl font-extrabold leading-tight"
+          >
             How I can Help.
           </h2>
         </aside>
 
         {/* Right: services list */}
-        <div className="divide-y divide-white/25">
+        <div className="divide-y divide-line-strong">
           {items.map((s, idx) => (
             <article key={s.title} className="group py-6 sm:py-8 md:py-10">
               {/* Image
@@ -51,13 +58,13 @@ export default function Services() {
 
               {/* Number + content (smaller on mobile) */}
               <div className="grid grid-cols-[auto_1fr] items-start gap-4 md:gap-6">
-                <div className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-none text-white/85 tabular-nums select-none">
+                <div className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-none text-ink-90 tabular-nums select-none">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
 
                 <div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm sm:text-base text-white/90">{s.desc}</p>
+                  <p className="mt-2 text-sm sm:text-base text-ink-90">{s.desc}</p>
 
                   <a
                     href="#contact"

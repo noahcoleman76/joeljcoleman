@@ -31,7 +31,9 @@ export default function Hero() {
           playsInline
           src={videoSrc}
         />
-        <div className="absolute inset-0 bg-black/45 md:bg-black/40" />
+        {/* overlay from theme tokens */}
+        <div className="absolute inset-0 bg-scrim md:bg-scrim-weak" />
+        {/* blend uses Tailwind theme variable for background */}
         <div className="absolute inset-0 hidden md:block bg-[linear-gradient(to_right,theme(colors.background)_0%,transparent_12%),linear-gradient(to_top,theme(colors.background)_0%,transparent_25%)]" />
       </div>
 
@@ -44,13 +46,16 @@ export default function Hero() {
           md:w-auto md:absolute md:left-10 md:right-[35vw] md:top-1/2 md:-translate-y-1/2
         "
       >
-        <h1 className="
-          font-primary font-bold tracking-tight leading-[1.02]
-          text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[4.6rem]
-        ">
+        <h1
+          className="
+            font-primary font-bold tracking-tight leading-[1.02]
+            text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[4.6rem]
+            text-ink
+          "
+        >
           Academic <span className="text-brand">Excellence</span>{" "}
-          <span className="text-white/90">Through Innovation</span>{" "}
-          <span className="text-white/80">and Mastery</span>
+          <span className="text-ink-90">Through Innovation</span>{" "}
+          <span className="text-ink-80">and Mastery</span>
         </h1>
       </div>
     </section>
