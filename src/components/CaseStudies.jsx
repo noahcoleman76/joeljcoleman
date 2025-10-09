@@ -1,15 +1,31 @@
 import React from "react";
 
 const cases = [
-  { title: "Elementary Literacy Growth",
-    result: "23% increase in on-grade-level reading in two years",
-    summary: "Aligned Tier 1 instruction, implemented data cycles, and coached PLCs for consistency across classrooms." },
-  { title: "SPED Trust Rebuilt",
-    result: "Due process risk reduced 70% in one year",
-    summary: "Redesigned IEP processes, expanded inclusion, and created parent advisory groups for authentic partnership." },
-  { title: "Transportation Efficiency",
-    result: "$1.1M reallocated to classrooms",
-    summary: "Boundary review, bell schedule optimization, and routing software improvements lowered costs while improving service." },
+  {
+    title: "High School Completion Success",
+    result: "100% graduation rate for eligible students (2018–19)",
+    summary: "In the 2018–19 school year, all eligible USDB high school students graduated with a diploma or certificate, achieving a 0% dropout rate. (Source: BoardDocs)"
+  },
+  {
+    title: "Targeted Student Growth",
+    result: "29-point average gain in student scores",
+    summary: "A small cohort of students at USDB showed remarkable progress, achieving an average 29-point increase in test scores from Fall 2022 to 2023. (Source: utah.gov)"
+  },
+  {
+    title: "Competency-Based Tracking Implementation",
+    result: "Literacy gains through competency tracking",
+    summary: "Utah Schools for the Deaf & Blind piloted a new data and tracking system to monitor skill-level growth and support competency-based learning. (Source: Digital Promise)"
+  },
+  {
+    title: "Statewide Reach & Impact",
+    result: "2,500+ students served statewide with enriched supports",
+    summary: "USDB provides educational services, outreach, and resources to more than 2,500 students across Utah, enhancing access and opportunity. (Source: usdb.org)"
+  },
+  {
+    title: "Enhanced Programming & Engagement",
+    result: "70+ enrichment programs delivered in one year",
+    summary: "USDB offered more than 70 short-term, after-school, summer, and family camp programs to enrich student learning and strengthen community connection. (Source: BoardDocs)"
+  },
 ];
 
 export default function CaseStudies() {

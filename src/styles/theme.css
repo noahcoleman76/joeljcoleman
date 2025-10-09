@@ -2,17 +2,35 @@
 /* Global color tokens for the site */
 :root {
   /* ========= Surfaces ========= */
-  --color-bg:        #1a0b2b;  /* main site background */
-  --color-logos:     #241134;  /* LogosBar background (distinct) */
-  --color-surface:   #241134;  /* optional general alt surface (matches LogosBar) */
-  --color-section:   #7024ca;  /* services/contact background */
-  --color-brand:     #c7b0ff;  /* accent */
+  /* --color-bg: #1a0b2b;
+  --color-logos: #241134;
+  --color-surface: #241134;
+  --color-section: #7024ca;
+  --color-brand: #c7b0ff; */
+
+  --color-bg: #0e1a2b;
+  --color-logos: #13233a;
+  --color-surface: #1a2d4a;
+  --color-section: #003366;
+  --color-brand: #d4af37; 
+
+  /* --color-bg: #0b1d17;
+  --color-logos: #132820;
+  --color-surface: #1c3a2f;
+  --color-section: #285943;
+  --color-brand: #d68a3f; */
+
+  /* --color-bg: #151112;
+  --color-logos: #1b1618;
+  --color-surface: #241c1f;
+  --color-section: #7c0a02;
+  --color-brand: #e63946; */
 
   /* ========= Text (on dark) ========= */
-  --color-ink:       #ffffff;
-  --color-ink-90:    rgba(255, 255, 255, 0.90);
-  --color-ink-80:    rgba(255, 255, 255, 0.80);
-  --color-ink-70:    rgba(255, 255, 255, 0.70);
+  --color-ink: #ffffff;
+  --color-ink-90: rgba(255, 255, 255, 0.90);
+  --color-ink-80: rgba(255, 255, 255, 0.80);
+  --color-ink-70: rgba(255, 255, 255, 0.70);
   /* alias used by some components */
   --color-ink-muted: var(--color-ink-90);
 
@@ -21,23 +39,29 @@
   --color-line-strong: rgba(255, 255, 255, 0.25);
 
   /* ========= Light card surface ========= */
-  --color-card:          #ffffff;
-  --color-card-border:   #e2e8f0;  /* ~slate-200 */
-  --color-on-card:       #0f172a;  /* ~slate-900 */
-  --color-on-card-muted: #475569;  /* ~slate-600 */
+  --color-card: #ffffff;
+  --color-card-border: #e2e8f0;
+  /* ~slate-200 */
+  --color-on-card: #0f172a;
+  /* ~slate-900 */
+  --color-on-card-muted: #475569;
+  /* ~slate-600 */
 
   /* ========= Dark panels / alt cards ========= */
-  --color-panel:           rgba(255, 255, 255, 0.06);   /* subtle dark panel */
-  --color-card-alt:        rgba(199, 176, 255, 0.08);   /* brand-tinted dark card */
+  --color-panel: rgba(255, 255, 255, 0.06);
+  /* subtle dark panel */
+  --color-card-alt: rgba(199, 176, 255, 0.08);
+  /* brand-tinted dark card */
   --color-card-alt-border: rgba(199, 176, 255, 0.25);
 
   /* ========= Overlays / scrims ========= */
-  --color-scrim:        rgba(0, 0, 0, 0.45);
-  --color-scrim-weak:   rgba(0, 0, 0, 0.40);
+  --color-scrim: rgba(0, 0, 0, 0.45);
+  --color-scrim-weak: rgba(0, 0, 0, 0.40);
   --color-scrim-strong: rgba(0, 0, 0, 0.55);
 
   /* ========= Forms ========= */
-  --color-field-border: #cbd5e1;  /* ~slate-300 */
-  --color-placeholder:  #94a3b8;  /* ~slate-400 */
+  --color-field-border: #cbd5e1;
+  /* ~slate-300 */
+  --color-placeholder: #94a3b8;
+  /* ~slate-400 */
 }
-
