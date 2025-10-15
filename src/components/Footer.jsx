@@ -18,9 +18,9 @@ export default function Footer() {
               aria-label="JJC"
               title="JJC"
             >
-              <span className="text-section">j</span>
+              <span className="text-ink">j</span>
               <span className="text-brand">j</span>
-              <span className="text-section">c</span>
+              <span className="text-ink">c</span>
             </span>
           </div>
 
