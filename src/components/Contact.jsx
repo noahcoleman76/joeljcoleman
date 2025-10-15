@@ -17,20 +17,25 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      // Apps Script usually doesn't send CORS headers, so use no-cors and assume success.
+      // Apps Script often lacks CORS headers; "no-cors" + optimistic success.
       await fetch(url, { method: "POST", body: formData, mode: "no-cors" });
-      setStatus("success");
-      form.reset();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      setStatus("success");        // show the alert
+      form.reset();                // clear the form
+      // NOTE: do NOT scroll here; wait until user closes the alert
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong submitting the form. Please try again or email Joel directly.");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Do not scroll yet—let user see the error where they are
     }
   };
 
   const handleCloseAlert = () => {
-    window.location.href = "https://joeljcoleman.com";
+    // First scroll to the very top so they see the page header again
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Then redirect after a short delay (lets the scroll animate)
+    setTimeout(() => {
+      window.location.href = "https://joeljcoleman.com";
+    }, 600);
   };
 
   return (
@@ -42,16 +47,17 @@ export default function Contact() {
           {status === "success" && (
             <div
               role="alert"
+              aria-live="polite"
               className="mb-6 rounded-xl border border-green-500/40 bg-green-500/10 p-4 text-green-100 flex items-start justify-between gap-4"
             >
               <p className="text-sm">
-                <span className="font-semibold">Thank you for your submission.</span> We will reach out as soon as possible.
+                <span className="font-semibold">Thanks for your submission,</span> we'll get back to you as soon as possible!
               </p>
               <button
                 type="button"
                 onClick={handleCloseAlert}
                 className="shrink-0 rounded-lg px-3 py-1.5 bg-green-600/20 hover:bg-green-600/30 focus:outline-none focus:ring-2 focus:ring-green-400"
-                aria-label="Close and return to home"
+                aria-label="Close and go to joeljcoleman.com"
                 title="Close"
               >
                 Close
@@ -92,10 +98,11 @@ export default function Contact() {
                 </label>
               </p>
 
-              {/* Hidden fields (kept) */}
+              {/* Hidden fields */}
               <input type="hidden" name="thankyou" value="https://joeljcoleman.com" />
               <input type="hidden" name="page_url" id="page_url" value="" />
               <input type="hidden" name="secret" value="jgfsfsdhfdshfdshfds" />
+              <input type="hidden" name="ajax" value="1" />
 
               {/* Row: Name / Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -184,7 +191,7 @@ export default function Contact() {
                 </a>
               </p>
             </form>
-          </div>
+          </div> 
         </div>
       </div>
     </section>
