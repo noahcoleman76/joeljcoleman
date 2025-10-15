@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="hidden md:flex justify-end">
           <a href="mailto:hello@joeljcoleman.com" className="btn btn-primary">
             Book a consult
-          </a>
+          </a> 
         </div>
 
         <button
