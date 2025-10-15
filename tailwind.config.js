@@ -17,6 +17,7 @@ export default {
         'ink-90':   'var(--color-ink-90)',
         'ink-80':   'var(--color-ink-80)',
         'ink-70':   'var(--color-ink-70)',
+        'ink-button': 'var(--color-section)',
 
         // Cards (light)
         'card-border':     'var(--color-card-border)',

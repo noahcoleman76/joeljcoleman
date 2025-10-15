@@ -57,9 +57,8 @@ body {
 }
 
 .btn-primary {
-  @apply text-background hover:opacity-90;
+  @apply text-background hover:opacity-90 text-ink-button;
   background-color: white;
-  color: rgb(88, 30, 143);
 }
 
 .btn-outline {
