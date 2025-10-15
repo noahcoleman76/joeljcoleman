@@ -6,10 +6,10 @@ export default function Services() {
 
   const items = [
     { title: "Improving Academic Outcomes", desc: "Proven strategies to raise student performance and close achievement gaps.", img: `${base}media/services/service1.jpg`, cta: "Learn more" },
-    { title: "Blended Learning Initiatives", desc: "Designing and implementing models that combine technology with effective teaching.", img: `${base}media/services/service2.jpg`, cta: "How it works" },
+    { title: "Ed Tech & AI Initiatives", desc: "Designing and implementing models that combine technology with effective teaching.", img: `${base}media/services/service2.jpg`, cta: "How it works" },
     { title: "Competency-Based Learning", desc: "Helping schools shift from time-based progress to true mastery and understanding.", img: `${base}media/services/service3.jpg`, cta: "Talk to me" },
     { title: "Budget Prioritization", desc: "Aligning resources with what matters most for students, staff, and community impact.", img: `${base}media/services/service4.jpg`, cta: "See approach" },
-    { title: "Leadership Development", desc: "Cultivating strong, visionary leaders at every level of the district.", img: `${base}media/services/service5.jpg`, cta: "Coach with Joel" },
+    { title: "Leadership & Board Development", desc: "Cultivating strong, visionary leaders at every level of the district.", img: `${base}media/services/service5.jpg`, cta: "Coach with Joel" },
     { title: "Employee Satisfaction & Culture", desc: "Building trust, morale, and engagement to retain great educators.", img: `${base}media/services/service6.jpg`, cta: "Let’s improve culture" },
   ];
 
